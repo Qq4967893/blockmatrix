@@ -1,0 +1,100 @@
+<?php
+
+return [
+    'status' => [
+        0 => '未启用',
+        1 => '启用',
+        2 => '作废',
+        'unknown' => '未知',
+    ],
+
+    'grant_method' => [
+        1 => '人工',
+        2 => '自动',
+        'unknown' => '未知',
+    ],
+
+    'target_type' => [
+        1 => '优惠券',
+        2 => '资金账户',
+        3 => '模拟账户',
+        4 => '赠金账户',
+        5 => 'XP',
+        6 => 'Drop',
+        'unknown' => '未知',
+    ],
+
+    'target_group' => [
+        'reward' => '奖励',
+        'points' => '积分',
+    ],
+
+    'target_option_format' => ':name-:start_at～:end_at',
+
+    'unlimited_count' => '无限制',
+
+    'message' => [
+        'enable_success' => '启用成功',
+        'void_success' => '作废成功',
+        'user_validation_failed' => '投递用户校验未通过，请修正后重试',
+        'name_exists' => '投递任务名称已存在',
+        'edit_not_allowed' => '仅未启用状态下可修改',
+        'target_not_exist' => '投递物不存在',
+        'insufficient_inventory' => '启用失败，投递物数量不足',
+        'expired' => '投递已过期',
+        'coupon_voided' => '优惠券已作废',
+        'coupon_not_enabled' => '优惠券未启用',
+        'enable_not_allowed' => '仅未启用状态的投递任务才可启用',
+        'void_not_allowed' => '当前投递任务不可作废',
+        'completed_cannot_void' => '投递已完成，不允许作废',
+        'inviter_user_not_exist' => ':user_code用户不存在',
+        'invalid_user_code_format' => '用户ID格式错误',
+        'user_code_limit_exceeded' => '用户ID数量不能超过:count个',
+        'import_file_invalid' => '文件格式错误，请上传正确的Excel模板',
+        'import_template_invalid' => '模板格式错误，请使用模板下载接口提供的Excel模板',
+        'user_already_has_credit_bonus' => '用户:user_codes已存在赠金，不可重复发放',
+    ],
+
+    'validation' => [
+        'name_required' => '投递任务名称不能为空',
+        'name_string' => '投递任务名称格式错误',
+        'name_max' => '投递任务名称长度不能超过100个字符',
+        'target_type_required' => '投递物类型不能为空',
+        'target_type_integer' => '投递物类型数据错误',
+        'target_type_in' => '投递物类型错误，仅支持：1优惠券，2资金账户，3模拟账户，4赠金账户，5XP，6Drop',
+        'target_required' => '投递物不能为空',
+        'target_integer' => '投递物数据错误',
+        'target_min' => '投递物数据错误',
+        'grant_method_required' => '投递方式不能为空',
+        'grant_method_integer' => '投递方式数据错误',
+        'grant_method_in' => '投递方式错误，仅支持：1人工，2自动',
+        'total_count_required' => '发放总量不能为空',
+        'total_count_integer' => '发放总量数据错误，需要为大于等于0的整数',
+        'total_count_min' => '发放总量必须为大于等于0的整数',
+        'start_at_required' => '投递开始时间不能为空',
+        'start_at_date_format' => '投递开始时间格式错误，需要满足：Y-m-d H:i:s',
+        'end_at_required' => '投递结束时间不能为空',
+        'end_at_date_format' => '投递结束时间格式错误，需要满足：Y-m-d H:i:s',
+        'end_at_after_start' => '投递结束时间不能早于投递开始时间',
+        'event_key_required' => '自动投递事件不能为空',
+        'event_key_string' => '自动投递事件格式错误',
+        'event_key_in' => '自动投递事件错误，请选择正确的事件',
+        'event_params_required' => '事件参数不能为空',
+        'event_params_array' => '事件参数格式错误',
+        'event_param_required' => ':name不能为空',
+        'relation_in' => '事件条件关系错误，仅支持：or / and',
+        'user_codes_required' => '手工投递用户不能为空',
+        'user_codes_array' => '手工投递用户格式错误',
+        'user_codes_min' => '手工投递用户不能为空',
+        'user_codes_max' => '手工投递用户数量不能超过:count个',
+        'user_codes_item_integer' => '手工投递用户ID格式错误',
+        'user_codes_item_min' => '手工投递用户ID格式错误',
+        'status_required' => '状态不能为空',
+        'status_integer' => '状态数据错误',
+        'status_in' => '状态选项错误，仅支持：1启用，2作废',
+    ],
+
+    'template' => [
+        'user_code_header' => '用户ID',
+    ],
+];

@@ -1,0 +1,100 @@
+<?php
+
+return [
+    'status' => [
+        0 => '未有効化',
+        1 => '有効',
+        2 => '無効化済み',
+        'unknown' => '不明',
+    ],
+
+    'grant_method' => [
+        1 => '手動',
+        2 => '自動',
+        'unknown' => '不明',
+    ],
+
+    'target_type' => [
+        1 => 'クーポン',
+        2 => '資金口座',
+        3 => 'デモ口座',
+        4 => 'ボーナス口座',
+        5 => 'XP',
+        6 => 'Drop',
+        'unknown' => '不明',
+    ],
+
+    'target_group' => [
+        'reward' => '報酬',
+        'points' => 'ポイント',
+    ],
+
+    'target_option_format' => ':name-:start_at～:end_at',
+
+    'unlimited_count' => '無制限',
+
+    'message' => [
+        'enable_success' => '有効化に成功しました',
+        'void_success' => '無効化に成功しました',
+        'user_validation_failed' => '配布ユーザーの検証に失敗しました。修正後に再試行してください。',
+        'name_exists' => '配布タスク名はすでに存在します。',
+        'edit_not_allowed' => '未有効化の配布タスクのみ編集できます。',
+        'target_not_exist' => '配布対象が存在しません。',
+        'insufficient_inventory' => '有効化に失敗しました。配布対象数が不足しています。',
+        'expired' => '配布タスクは期限切れです。',
+        'coupon_voided' => 'クーポンはすでに無効化されています。',
+        'coupon_not_enabled' => 'クーポンは有効化されていません。',
+        'enable_not_allowed' => '未有効化の配布タスクのみ有効化できます。',
+        'void_not_allowed' => '現在の配布タスクは無効化できません。',
+        'completed_cannot_void' => '完了済みの配布タスクは無効化できません。',
+        'inviter_user_not_exist' => 'ユーザー :user_code は存在しません',
+        'invalid_user_code_format' => 'ユーザーIDの形式が不正です',
+        'user_code_limit_exceeded' => 'ユーザーIDの件数は :count 件を超えることはできません',
+        'import_file_invalid' => 'ファイル形式が不正です。正しいExcelテンプレートをアップロードしてください。',
+        'import_template_invalid' => 'テンプレート形式が不正です。テンプレートダウンロードAPIのExcelテンプレートを使用してください。',
+        'user_already_has_credit_bonus' => 'ユーザー:user_codesは既にクレジットボーナスを保有しているため、重複発行はできません',
+    ],
+
+    'validation' => [
+        'name_required' => '配布タスク名は必須です。',
+        'name_string' => '配布タスク名の形式が不正です。',
+        'name_max' => '配布タスク名は100文字以内で入力してください。',
+        'target_type_required' => '配布対象タイプは必須です。',
+        'target_type_integer' => '配布対象タイプの形式が不正です。',
+        'target_type_in' => '配布対象タイプが不正です。対応値: 1=クーポン, 2=資金口座, 3=デモ口座, 4=ボーナス口座, 5=XP, 6=Drop。',
+        'target_required' => '配布対象は必須です。',
+        'target_integer' => '配布対象の形式が不正です。',
+        'target_min' => '配布対象の形式が不正です。',
+        'grant_method_required' => '配布方法は必須です。',
+        'grant_method_integer' => '配布方法の形式が不正です。',
+        'grant_method_in' => '配布方法が不正です。利用可能な値: 1=手動, 2=自動。',
+        'total_count_required' => '配布総数は必須です。',
+        'total_count_integer' => '配布総数は0以上の整数である必要があります。',
+        'total_count_min' => '配布総数は0以上の整数である必要があります。',
+        'start_at_required' => '配布開始時間は必須です。',
+        'start_at_date_format' => '配布開始時間の形式が不正です。形式: Y-m-d H:i:s',
+        'end_at_required' => '配布終了時間は必須です。',
+        'end_at_date_format' => '配布終了時間の形式が不正です。形式: Y-m-d H:i:s',
+        'end_at_after_start' => '配布終了時間は開始時間より前にできません。',
+        'event_key_required' => '自動配布イベントは必須です。',
+        'event_key_string' => '自動配布イベントの形式が不正です。',
+        'event_key_in' => '自動配布イベントが不正です。',
+        'event_params_required' => 'イベントパラメータは必須です。',
+        'event_params_array' => 'イベントパラメータの形式が不正です。',
+        'event_param_required' => ':name は必須です。',
+        'relation_in' => 'イベント条件の関係が不正です。利用可能な値: or / and。',
+        'user_codes_required' => '手動配布ユーザーは必須です。',
+        'user_codes_array' => '手動配布ユーザーの形式が不正です。',
+        'user_codes_min' => '手動配布ユーザーは必須です。',
+        'user_codes_max' => '手動配布ユーザーは :count 件を超えることはできません。',
+        'user_codes_item_integer' => '手動配布ユーザーIDの形式が不正です。',
+        'user_codes_item_min' => '手動配布ユーザーIDの形式が不正です。',
+        'status_required' => 'ステータスは必須です。',
+        'status_integer' => 'ステータスの形式が不正です。',
+        'status_in' => 'ステータスが不正です。利用可能な値: 1=有効, 2=無効。',
+    ],
+
+    'template' => [
+        'user_code_header' => 'ユーザーID',
+    ],
+];

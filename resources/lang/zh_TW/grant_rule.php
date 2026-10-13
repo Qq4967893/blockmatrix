@@ -1,0 +1,100 @@
+<?php
+
+return [
+    'status' => [
+        0 => '未啟用',
+        1 => '啟用',
+        2 => '作廢',
+        'unknown' => '未知',
+    ],
+
+    'grant_method' => [
+        1 => '人工',
+        2 => '自動',
+        'unknown' => '未知',
+    ],
+
+    'target_type' => [
+        1 => '優惠券',
+        2 => '資金帳戶',
+        3 => '模擬帳戶',
+        4 => '贈金帳戶',
+        5 => 'XP',
+        6 => 'Drop',
+        'unknown' => '未知',
+    ],
+
+    'target_group' => [
+        'reward' => '獎勵',
+        'points' => '積分',
+    ],
+
+    'target_option_format' => ':name-:start_at～:end_at',
+
+    'unlimited_count' => '無限制',
+
+    'message' => [
+        'enable_success' => '啟用成功',
+        'void_success' => '作廢成功',
+        'user_validation_failed' => '投遞用戶校驗未通過，請修正後重試',
+        'name_exists' => '投遞任務名稱已存在',
+        'edit_not_allowed' => '僅未啟用狀態下可修改',
+        'target_not_exist' => '投遞物不存在',
+        'insufficient_inventory' => '啟用失敗，投遞物數量不足',
+        'expired' => '投遞已過期',
+        'coupon_voided' => '優惠券已作廢',
+        'coupon_not_enabled' => '優惠券未啟用',
+        'enable_not_allowed' => '僅未啟用狀態的投遞任務才可啟用',
+        'void_not_allowed' => '當前投遞任務不可作廢',
+        'completed_cannot_void' => '投遞已完成，不允許作廢',
+        'inviter_user_not_exist' => ':user_code用戶不存在',
+        'invalid_user_code_format' => '用戶ID格式錯誤',
+        'user_code_limit_exceeded' => '用戶ID數量不能超過:count個',
+        'import_file_invalid' => '檔案格式錯誤，請上傳正確的Excel模板',
+        'import_template_invalid' => '模板格式錯誤，請使用模板下載接口提供的Excel模板',
+        'user_already_has_credit_bonus' => '用戶:user_codes已存在贈金，不可重複發放',
+    ],
+
+    'validation' => [
+        'name_required' => '投遞任務名稱不能為空',
+        'name_string' => '投遞任務名稱格式錯誤',
+        'name_max' => '投遞任務名稱長度不能超過100個字符',
+        'target_type_required' => '投遞物類型不能為空',
+        'target_type_integer' => '投遞物類型數據錯誤',
+        'target_type_in' => '投遞物類型錯誤，僅支持：1優惠券，2資金帳戶，3模擬帳戶，4贈金帳戶，5XP，6Drop',
+        'target_required' => '投遞物不能為空',
+        'target_integer' => '投遞物數據錯誤',
+        'target_min' => '投遞物數據錯誤',
+        'grant_method_required' => '投遞方式不能為空',
+        'grant_method_integer' => '投遞方式數據錯誤',
+        'grant_method_in' => '投遞方式錯誤，僅支持：1人工，2自動',
+        'total_count_required' => '發放總量不能為空',
+        'total_count_integer' => '發放總量數據錯誤，需要為大於等於0的整數',
+        'total_count_min' => '發放總量必須為大於等於0的整數',
+        'start_at_required' => '投遞開始時間不能為空',
+        'start_at_date_format' => '投遞開始時間格式錯誤，需要滿足：Y-m-d H:i:s',
+        'end_at_required' => '投遞結束時間不能為空',
+        'end_at_date_format' => '投遞結束時間格式錯誤，需要滿足：Y-m-d H:i:s',
+        'end_at_after_start' => '投遞結束時間不能早於投遞開始時間',
+        'event_key_required' => '自動投遞事件不能為空',
+        'event_key_string' => '自動投遞事件格式錯誤',
+        'event_key_in' => '自動投遞事件錯誤，請選擇正確的事件',
+        'event_params_required' => '事件參數不能為空',
+        'event_params_array' => '事件參數格式錯誤',
+        'event_param_required' => ':name不能為空',
+        'relation_in' => '事件條件關係錯誤，僅支持：or / and',
+        'user_codes_required' => '手工投遞用戶不能為空',
+        'user_codes_array' => '手工投遞用戶格式錯誤',
+        'user_codes_min' => '手工投遞用戶不能為空',
+        'user_codes_max' => '手工投遞用戶數量不能超過:count個',
+        'user_codes_item_integer' => '手工投遞用戶ID格式錯誤',
+        'user_codes_item_min' => '手工投遞用戶ID格式錯誤',
+        'status_required' => '狀態不能為空',
+        'status_integer' => '狀態數據錯誤',
+        'status_in' => '狀態選項錯誤，僅支援：1啟用，2作廢',
+    ],
+
+    'template' => [
+        'user_code_header' => '用戶ID',
+    ],
+];

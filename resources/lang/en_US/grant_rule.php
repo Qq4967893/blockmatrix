@@ -1,0 +1,100 @@
+<?php
+
+return [
+    'status' => [
+        0 => 'Not enabled',
+        1 => 'Enabled',
+        2 => 'Voided',
+        'unknown' => 'Unknown',
+    ],
+
+    'grant_method' => [
+        1 => 'Manual',
+        2 => 'Automatic',
+        'unknown' => 'Unknown',
+    ],
+
+    'target_type' => [
+        1 => 'Coupon',
+        2 => 'Funding Account',
+        3 => 'Demo Account',
+        4 => 'Bonus Fund Account',
+        5 => 'XP',
+        6 => 'Drop',
+        'unknown' => 'Unknown',
+    ],
+
+    'target_group' => [
+        'reward' => 'Reward',
+        'points' => 'Points',
+    ],
+
+    'target_option_format' => ':name-:start_at～:end_at',
+
+    'unlimited_count' => 'Unlimited',
+
+    'message' => [
+        'enable_success' => 'Enabled successfully',
+        'void_success' => 'Voided successfully',
+        'user_validation_failed' => 'Grant user validation failed. Please fix the invalid users and try again.',
+        'name_exists' => 'Grant task name already exists.',
+        'edit_not_allowed' => 'Only not-enabled grant rules can be edited.',
+        'target_not_exist' => 'Grant target does not exist.',
+        'insufficient_inventory' => 'Enable failed. Insufficient target quantity.',
+        'expired' => 'The grant rule has expired.',
+        'coupon_voided' => 'The coupon has been voided.',
+        'coupon_not_enabled' => 'The coupon is not enabled.',
+        'enable_not_allowed' => 'Only not-enabled grant rules can be enabled.',
+        'void_not_allowed' => 'The current grant rule cannot be voided.',
+        'completed_cannot_void' => 'Completed grant rules cannot be voided.',
+        'inviter_user_not_exist' => 'User :user_code does not exist',
+        'invalid_user_code_format' => 'Invalid user ID format',
+        'user_code_limit_exceeded' => 'The number of user IDs must not exceed :count.',
+        'import_file_invalid' => 'Invalid file format. Please upload the correct Excel template.',
+        'import_template_invalid' => 'Invalid template format. Please use the Excel template provided by the template download endpoint.',
+        'user_already_has_credit_bonus' => 'User(s) :user_codes already have credit bonus. Duplicate issuance is not allowed.',
+    ],
+
+    'validation' => [
+        'name_required' => 'Grant task name is required.',
+        'name_string' => 'Grant task name format is invalid.',
+        'name_max' => 'Grant task name must not exceed 100 characters.',
+        'target_type_required' => 'Grant target type is required.',
+        'target_type_integer' => 'Grant target type format is invalid.',
+        'target_type_in' => 'Grant target type is invalid. Supported values: 1=coupon, 2=funding account, 3=demo account, 4=bonus fund account, 5=XP, 6=Drop.',
+        'target_required' => 'Grant target is required.',
+        'target_integer' => 'Grant target format is invalid.',
+        'target_min' => 'Grant target format is invalid.',
+        'grant_method_required' => 'Grant method is required.',
+        'grant_method_integer' => 'Grant method format is invalid.',
+        'grant_method_in' => 'Grant method is invalid. Supported values: 1=manual, 2=automatic.',
+        'total_count_required' => 'Total issuance count is required.',
+        'total_count_integer' => 'Total issuance count must be an integer greater than or equal to 0.',
+        'total_count_min' => 'Total issuance count must be an integer greater than or equal to 0.',
+        'start_at_required' => 'Grant start time is required.',
+        'start_at_date_format' => 'Grant start time format is invalid. Expected: Y-m-d H:i:s',
+        'end_at_required' => 'Grant end time is required.',
+        'end_at_date_format' => 'Grant end time format is invalid. Expected: Y-m-d H:i:s',
+        'end_at_after_start' => 'Grant end time cannot be earlier than grant start time.',
+        'event_key_required' => 'Automatic grant event is required.',
+        'event_key_string' => 'Automatic grant event format is invalid.',
+        'event_key_in' => 'Automatic grant event is invalid.',
+        'event_params_required' => 'Event parameters are required.',
+        'event_params_array' => 'Event parameters format is invalid.',
+        'event_param_required' => ':name is required.',
+        'relation_in' => 'Event relation is invalid. Supported values: or / and.',
+        'user_codes_required' => 'Manual grant users are required.',
+        'user_codes_array' => 'Manual grant users format is invalid.',
+        'user_codes_min' => 'Manual grant users are required.',
+        'user_codes_max' => 'Manual grant users must not exceed :count.',
+        'user_codes_item_integer' => 'Manual grant user ID format is invalid.',
+        'user_codes_item_min' => 'Manual grant user ID format is invalid.',
+        'status_required' => 'Status is required.',
+        'status_integer' => 'Status format is invalid.',
+        'status_in' => 'Invalid status. Supported values: 1=enabled, 2=voided.',
+    ],
+
+    'template' => [
+        'user_code_header' => 'User ID',
+    ],
+];
